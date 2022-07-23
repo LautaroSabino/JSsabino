@@ -25,3 +25,25 @@ alert(resultado); */
 // } else{
 //     alert("Usted de ninguna manera puede hacerse una cuenta, váyase");
 // }
+
+// for (let i = 0; i < 3; i++) {
+//     console.log("el valor de la variable i es: " + i);
+// }
+
+// for (let i = 0; i < 3; i++) {
+//     console.log("el valor de la variable i es: " + i*2);
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//     if (i == 5) {
+//         continue;
+//     }
+//     alert(i);
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//     if (i == 5) {
+//         break;
+//     }
+//     alert(i);
+// }
