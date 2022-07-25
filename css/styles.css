@@ -3,7 +3,8 @@
     padding: 0%;
     box-sizing: border-box;
     list-style: none;
-    text-decoration: none; }
+    text-decoration: none;
+}
 
 body{
     background-color: burlywood;
@@ -13,7 +14,10 @@ body{
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-.titulo{
+.title{
+    border: 5px, solid, black;
+    background-color: rgb(241, 233, 165);
     text-align: center;
-    padding: 30px;    
+    padding: 40px;   
+    margin: 10px;    
 }
