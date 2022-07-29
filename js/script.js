@@ -25,18 +25,18 @@ if (genero == 'h') {
 
 alert('En apenas diez segundos, comenzamos la aventura');
 
-let cuenta = 10
-while (cuenta < 11) {
-    cuenta--;
-    console.log(cuenta);
-    if (cuenta == 0) {
+let cuentaRegresiva = 10
+while (cuentaRegresiva < 11) {
+    cuentaRegresiva--;
+    console.log(cuentaRegresiva);
+    if (cuentaRegresiva == 0) {
         console.log('¡Comenzamos!');
         break;
     }
 }
 
-const felicitar = () => {
+const felicitar = (nombre) => {
     console.log("¡Felicitaciones " + nombre + "!")
 }
 
-felicitar();
+felicitar(nombre);
