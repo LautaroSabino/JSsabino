@@ -1,17 +1,15 @@
-console.log('Buenos días, viajero/a. Hoy vas a ingresar a un nuevo mundo de aventuras. Mi nombre es Jhon Montalto y mi misión es ayudarte en este viaje.');
+let nombre = prompt(`Buenos días, viajero/a. Hoy vas a ingresar a un nuevo mundo de aventuras. Mi nombre es Jhon Montalto y mi misión es ayudarte en este viaje.
+\n Por favor, ingresá el nombre de tu personaje: `);
 
-let nombre = prompt('Por favor, ingresá el nombre de tu personaje: ');
-
-const saludar = () => {
-    console.log("¡Bienvenido/a " + nombre + " a este nuevo mundo!")
+const saludar = (nombre) => {
+    console.log("¡Bienvenido/a " + nombre + " a este nuevo mundo!");
 }
 
-saludar();
+saludar(nombre);
 
 
-console.log('Ahora, necesito que me digas si tu personaje es hombre, mujer o sin género: ');
-
-let genero = prompt('Ingresa h si tu personaje es hombre, m si tu personaje es mujer, o x si tu personaje no tiene género: ');
+let genero = prompt(`Ahora, necesito que me digas si tu personaje es hombre, mujer o sin género: 
+\n Ingresa h si tu personaje es hombre, m si tu personaje es mujer, o x si tu personaje no tiene género: `);
 
 if (genero == 'h') {
     console.log('Perfecto, tu personaje es un hombre');
@@ -20,23 +18,15 @@ if (genero == 'h') {
 } else if (genero == 'x') {
     console.log('Perfecto, tu personaje no tiene genero');
 } else {
-    console.log('No ingresaste bien el género de tu personaje');
+    console.log('No ingresaste bien el género de tu personaje. No te preocupes, luego podrás volver a hacerlo');
 }
 
 alert('En apenas diez segundos, comenzamos la aventura');
 
-let cuentaRegresiva = 10
-while (cuentaRegresiva < 11) {
-    cuentaRegresiva--;
-    console.log(cuentaRegresiva);
-    if (cuentaRegresiva == 0) {
-        console.log('¡Comenzamos!');
-        break;
+for (let i = 0; i <= 10; i++) {
+    alert(i);
+
+    if (i == 10){
+        alert("Comienza tu aventura!");
     }
 }
-
-const felicitar = (nombre) => {
-    console.log("¡Felicitaciones " + nombre + "!")
-}
-
-felicitar(nombre);
