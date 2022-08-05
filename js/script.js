@@ -1,76 +1,41 @@
-// let nombre = prompt(`Buenos días, viajero/a. Hoy vas a ingresar a un nuevo mundo de aventuras. Mi nombre es Jhon Montalto y mi misión es ayudarte en este viaje.
-// \n Por favor, ingresá el nombre de tu personaje: `);
+class Menu {
 
-// const saludar = (nombre) => {
-//     console.log("¡Bienvenido/a " + nombre + " a este nuevo mundo!");
-// }
-
-// saludar(nombre);
-
-
-// let genero = prompt(`Ahora, necesito que me digas si tu personaje es hombre, mujer o sin género: 
-// \n Ingresa h si tu personaje es hombre, m si tu personaje es mujer, o x si tu personaje no tiene género: `);
-
-// if (genero == 'h') {
-//     console.log('Perfecto, tu personaje es un hombre');
-// } else if (genero == 'm') {
-//     console.log('Perfecto, tu personaje es una mujer');
-// } else if (genero == 'x') {
-//     console.log('Perfecto, tu personaje no tiene genero');
-// } else {
-//     console.log('No ingresaste bien el género de tu personaje. No te preocupes, luego podrás volver a hacerlo');
-// }
-
-// alert('En apenas diez segundos, comenzamos la aventura');
-
-// for (let i = 0; i <= 10; i++) {
-//     alert(i);
-
-//     if (i == 10){
-//         alert("¡Comienza tu aventura!");
-//     }
-// }
-
-let persona1 = {
-    nombre: 'Jhon',
-    apellido: 'Montalto',
-    rol: 'ayudante',
-    edad: 42,
-    hablar: function () {
-        document.write("Hola viajero, mi misión es ayudarte")
+    constructor(comida, precio, porcion) {
+        this.comida = comida.toUpperCase();
+        this.precio = parseFloat(precio);
+        this.porcion = porcion;
     }
+
+    sumarIva() {
+        this.precio = this.precio * 1.21;
+    }
+
+
 }
 
-class Persona {
+const pollo = new Menu('Pollo al espiedo', 1700, '3 personas');
+const tarta = new Menu('Tarta de verdura', 1100, '2 personas');
+const empanada = new Menu('Empanada de carne', 160, '1 persona');
+const guiso = new Menu('Guiso de lentejas', 850, '1 persona');
+const budin = new Menu('Budin de pan', 600, '2 personas');
+const lasagna = new Menu('Lasagna', 2200, '3 personas');
+const pizzaneza = new Menu('Pizzaneza', 2450, '4 personas');
+const pizza = new Menu('Pizza muzzarella', 1100, '3 personas');
 
-    constructor(nombre, apellido, rol, edad){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.rol = rol;
-        this.edad = edad;
-    }
+console.log(pollo.comida);
+console.log(tarta.precio);
+console.log(budin.porcion);
 
-    hablar(){
-        document.write("Hola viajero, mi misión es ayudarte")
-    }      
+pizza.sumarIva();
+console.log("El precio de " + pizza.comida + " es " + pizza.precio );
+
+
+
+const especialidades = [pollo, guiso]
+const minutas = [tarta, empanada, pizzaneza, pizza]
+const pastas = [lasagna]
+const postres = [budin]
+
+for (const i of minutas) {
+    console.log(i);
 }
-
-
-
-function Persona(nombre, apellido, rol, edad) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.rol = rol;
-    this.edad = edad;
-
-    }
-
-
-const persona2 = new Persona('Pablo', 'Perez', 'mozo', 56);
-
-
-document.write(persona2.rol + "<br>");
-document.write(persona2.edad + "<br>");
-document.write(persona1.apellido + "<br>");
-
-let palabra = 'javascript'
