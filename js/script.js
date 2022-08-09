@@ -27,34 +27,19 @@ const pizzaNapo = new Menu('Pizza napolitana', 1500, '3 personas');
 const pizzaRoque = new Menu('Pizza roquefort', 1800, '3 personas');
 const pizzaCala = new Menu('Pizza calabreza', 1900, '3 personas');
 
-
-
-omelet.sumarIva();
-console.log("El precio de " + omelet.comida + " es " + omelet.precio );
-
-
 const especialidades = [pollo, guiso, omelet];
 const minutas = [tarta, empanada, pizzaneza];
 const pastas = [lasagna, ravioles];
-const postres = [budin, chocotorta];
 const pizzas = [pizzaMuzza, pizzaEsp];
+const postres = [budin, chocotorta];
 
+omelet.sumarIva();
+console.log(`El precio de ${omelet.comida} es ${omelet.precio}` );
 
-for (let i in minutas) {
-    console.log(i);
-    console.log(minutas[i]);
-}
-
-
-for (let i in especialidades) {
-    console.log(i);
-    console.log(especialidades[i]);
-}
-
-pizzas.push("pizzaNapo", "pizzaRoquefot");
+pizzas.push(pizzaNapo, pizzaRoque);
 console.log(pizzas);
 
-pizzas.unshift("pizzaCalabresa");
+pizzas.unshift(pizzaCala);
 console.log(pizzas, pizzas.length);
 
 pastas.join(" ,");
@@ -65,9 +50,6 @@ console.log(encontrado);
 
 const filtrado = pizzas.filter((pizzas)=> pizzas.precio > 1000);
 console.log(filtrado);
-
-const filtradoDos = pizzas.filter((pizzas)=> pizzas.precio > 2000);
-console.log(filtradoDos);
 
 const buscaPostre = postres.some((postres)=> postres.precio < 600);
 console.log(buscaPostre);
@@ -81,5 +63,33 @@ const descuento = especialidades.map((especialidades)=>{
 
 console.log(descuento);
 
+let saludo = prompt(`Bienvenido a Don Marino. ¿Qué menú deseas ver el día de hoy?
+\n Por favor, ingresá la opción correspondiente:
+\n 1- ESPECIALIDADES, 2- MINUTAS, 3- PASTAS, 4- PIZZAS , 5-POSTRES`);
 
+saludo = parseInt(saludo);
 
+if (saludo == 1) {
+    especialidades.forEach(element => {
+        console.log(element)
+    });
+
+} else if (saludo == 2) {
+    minutas.forEach(element => {
+        console.log(element)
+    });
+} else if (saludo == 3) {
+    pastas.forEach(element => {
+        console.log(element)
+    });
+} else if (saludo == 4) {
+    pizzas.forEach(element => {
+        console.log(element)
+    });
+} else if (saludo == 5) {
+    postres.forEach(element => {
+        console.log(element)
+    });
+} else {
+    console.log('Lo siento, no ingresaste el dato correspondiente');
+}

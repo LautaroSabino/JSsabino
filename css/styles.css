@@ -47,6 +47,7 @@ body{
     font-weight: 900;
     padding: 20px;   
     margin-top: 0%; 
+    border-bottom: 3px solid rgb(231, 215, 155);
 }
 
 .mainTitle{
@@ -67,7 +68,9 @@ body{
 footer{
     background-color: rgb(26, 24, 24);
     color: rgb(94, 198, 76);
+    padding: 10px;
     text-align: center;
     font-size: medium;
+    border-top: 3px solid rgb(231, 215, 155);
     margin-bottom: 0%;
 }
