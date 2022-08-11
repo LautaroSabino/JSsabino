@@ -70,7 +70,24 @@ footer{
     color: rgb(94, 198, 76);
     padding: 10px;
     text-align: center;
-    font-size: medium;
+    font-size: xx-small;
     border-top: 3px solid rgb(231, 215, 155);
     margin-bottom: 0%;
+}
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainInfo{
+    width: 90vh;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: medium;
+    background-color: burlywood;
+    border: 2px solid coral;
 }
