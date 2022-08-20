@@ -38,21 +38,16 @@ const pastas = [lasagna, ravioles];
 const pizzas = [pizzaMuzza, pizzaEsp];
 const postres = [budin, chocotorta];
 
-const menuTotal = [pollo, guiso, omelet, tarta, empanada, pizzaneza, lasagna, ravioles, pizzaMuzza, pizzaEsp, budin, chocotorta];
+const menuTotal = [...especialidades, ...minutas, ...pastas, ...pizzas, ...postres]
 
-
-console.log(menuTotal);
 
 let selectorOpciones = document.querySelector('#opcionesMenu');
 let elegir = document.querySelector('#elegir');
 let listaResultados = document.getElementById('resultado');
 
-const filtrar = (array, categoria) => { return array.filter(item => item.categoria == categoria) }
+const filtrar = (array, categoria) => array.filter(item => item.categoria == categoria);
+const handleClick = (array, select) =>  filtrar(array, select.value);
 
-
-const handleClick = (array, select) => {
-    return filtrar(array, select.value);
-}
 
 const mostrarHTML = (array, lista) => {
     lista.innerHTML = '';
@@ -65,3 +60,10 @@ const mostrarHTML = (array, lista) => {
 elegir.onclick = () => {
     mostrarHTML(handleClick(menuTotal, selectorOpciones), listaResultados);
 }
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+let arrayStorage = JSON.parse(localStorage.getItem('especialidades'));
+
+console.log(arrayStorage);
