@@ -63,7 +63,3 @@ elegir.onclick = () => {
 
 /*------------------------------------------------------------------------------------------------*/
 
-
-let arrayStorage = JSON.parse(localStorage.getItem('especialidades'));
-
-console.log(arrayStorage);
