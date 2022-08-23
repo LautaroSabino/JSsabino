@@ -29,11 +29,11 @@
         </header>
         <main>
             <div class="main">
-                <div class="mainInfo">
+                <div class="mainInfo p-3 mb-2 bg-dark text-light">
                     <h3>Bienvenido a Don Marino</h3>
                     <h5> ¿Qué menú deseas ver el día de hoy? Por favor, ingresá la opción correspondiente:</h5>
                     <br>
-                    <select name="" id="opcionesMenu">
+                    <select name="" id="opcionesMenu" class="form-select form-select-lg mb-3">
                         <option value="especialidades">ESPECIALIDADES</option>
                         <option value="minutas">MINUTAS</option>
                         <option value="pastas">PASTAS</option>
@@ -41,15 +41,16 @@
                         <option value="postres">POSTRES</option>
                     </select>
 
-                    <button type="submit" id="elegir">Elegir</button>
+                    <button type="submit" class="btn btn-success" id="elegir">Elegir</button>
 
                 </div>
-                <div class="mainInfo" id="muestra">
+                <div class="mainInfo p-3 mb-2 bg-dark text-light" id="muestra">
                     <ul id="resultado"></ul>
                 </div>
 
 
             </div>
+            
             <div class="link">
                 <a clas="aLink" href="./pages/form.html">CONTACTO</a>
             </div>
