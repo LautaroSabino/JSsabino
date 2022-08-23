@@ -1,6 +1,6 @@
 const infoForm = document.querySelector('#formulario');
+let recordar = document.querySelector('#rememberMe');
 
-infoForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -28,8 +28,31 @@ function handleSubmit(event) {
 
     console.log(traerInfo);
 
+    name.value = '';
+    firstName.value = '';
+    number.value = '';
+    mensaje = '';
 }
 
+function guardarDatos() {
+    let username = document.querySelector('#nombre').value
+    let userFname = document.querySelector('#apellido').value
+
+    const usuario = {
+        'name': username,
+        'Fname': userFname
+    }
+
+    localStorage.setItem('user', JSON.stringify(usuario));
+}
+
+infoForm.addEventListener('submit', handleSubmit);
 
 
+recordar.addEventListener('click', ()=>{
+    
+        guardarDatos();   
+})
 
+
+/*------------------------------------------------------------------------------------------------*/
