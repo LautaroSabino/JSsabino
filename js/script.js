@@ -37,7 +37,7 @@ const pastel = new Menu('Pastel de papas', 900, '1 persona', 'especialidades');
 const especialidades = [pollo, guiso, omelet, pastel];
 const minutas = [tarta, empanada, pizzaneza];
 const pastas = [lasagna, ravioles, noquis];
-const pizzas = [pizzaMuzza, pizzaEsp];
+const pizzas = [pizzaMuzza, pizzaEsp, pizzaRoque, pizzaCala];
 const postres = [budin, chocotorta];
 
 const menuTotal = [...especialidades, ...minutas, ...pastas, ...pizzas, ...postres]

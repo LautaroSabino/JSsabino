@@ -55,7 +55,7 @@ header {
 
 .title{
     background-image: radial-gradient(circle at 50% 50%, #ff4e16 0, #ff3424 25%, #ed0c2c 50%, #da0031 75%, #c80035 100%);
-    max-width: 50%;
+    max-width: 35%;
     margin: 0% auto;
     
 }
@@ -126,5 +126,6 @@ footer {
     font-size: x-small;
     border-top: 3px solid rgb(231, 215, 155);
     margin-bottom: 0%;
+    margin-top: 20px;
     text-align: center;
 }
