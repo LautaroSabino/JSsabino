@@ -20,6 +20,7 @@ const empanada = new Menu('Empanada de carne', 160, '1 persona', 'minutas');
 const guiso = new Menu('Guiso de lentejas', 850, '1 persona', 'especialidades');
 const budin = new Menu('Budin de pan', 600, '2 personas', 'postres');
 const lasagna = new Menu('Lasagna', 2200, '3 personas', 'pastas');
+const noquis = new Menu('Noquis', 900, '1 persona', 'pastas');
 const pizzaneza = new Menu('Pizzaneza', 2450, '4 personas', 'minutas');
 const pizzaMuzza = new Menu('Pizza muzzarella', 1100, '3 personas', 'pizzas');
 const omelet = new Menu('Omelet de jamón y queso', 900, '1 persona', 'especialidades');
@@ -29,21 +30,25 @@ const pizzaEsp = new Menu('Pizza especial', 1500, '3 personas', 'pizzas');
 const pizzaNapo = new Menu('Pizza napolitana', 1500, '3 personas', 'pizzas');
 const pizzaRoque = new Menu('Pizza roquefort', 1800, '3 personas', 'pizzas');
 const pizzaCala = new Menu('Pizza calabreza', 1900, '3 personas', 'pizzas');
+const pastel = new Menu('Pastel de papas', 900, '1 persona', 'especialidades');
 
 /*-------------------------------------------------------------------*/
 
-const especialidades = [pollo, guiso, omelet];
+const especialidades = [pollo, guiso, omelet, pastel];
 const minutas = [tarta, empanada, pizzaneza];
-const pastas = [lasagna, ravioles];
+const pastas = [lasagna, ravioles, noquis];
 const pizzas = [pizzaMuzza, pizzaEsp];
 const postres = [budin, chocotorta];
 
 const menuTotal = [...especialidades, ...minutas, ...pastas, ...pizzas, ...postres]
 
+/*--------------------------------------------------------------------------------------------------------*/
+
 
 let selectorOpciones = document.querySelector('#opcionesMenu');
 let elegir = document.querySelector('#elegir');
 let listaResultados = document.getElementById('resultado');
+
 
 const filtrar = (array, categoria) => array.filter(item => item.categoria == categoria);
 const handleClick = (array, select) =>  filtrar(array, select.value);
@@ -57,9 +62,8 @@ const mostrarHTML = (array, lista) => {
     })
 }
 
-elegir.onclick = () => {
-    mostrarHTML(handleClick(menuTotal, selectorOpciones), listaResultados);
-}
+elegir.addEventListener('click', () => mostrarHTML(handleClick(menuTotal, selectorOpciones), listaResultados))
 
-/*------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------*/
 
