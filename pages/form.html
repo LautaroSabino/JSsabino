@@ -24,7 +24,8 @@
     <div class="grilla">
         <header>
             <div class="title">
-                <a href="../index.html"><img class="logo" src="../media/logo.jpg" alt="logo" width="500" height="150"></a>
+                <a href="../index.html"><img class="logo" src="../media/logo.jpg" alt="logo" width="500"
+                        height="150"></a>
             </div>
         </header>
         <main>
@@ -41,7 +42,11 @@
                     <label for="numero" class="label">Número de telefono</label>
                     <input type="number" name="numero" id="numero" class="input" placeholder="Número de teléfono">
                     <label for="mensaje" class="label">Dejanos tu consulta</label>
-                    <textarea name="mensaje" id="mensaje" cols="10" rows="5"></textarea>
+                    <div class="noSobrepasa">
+                        <textarea name="mensaje" id="mi_texto" cols="40" rows="5"></textarea>
+                        <p id="resul"></p>
+                    </div>
+
                     <div class="divBtn">
                         <button type="submit" id="buttonForm" class="input btn btn-success">Enviar Consulta</button>
                         <button type="submit" id="rememberMe" class="input btn btn-danger">Recordarme</button>
