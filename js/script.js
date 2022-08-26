@@ -18,6 +18,7 @@ const pollo = new Menu('Pollo al espiedo', 1700, '3 personas', 'especialidades')
 const tarta = new Menu('Tarta de verdura', 1100, '2 personas', 'minutas');
 const empanada = new Menu('Empanada de carne', 160, '1 persona', 'minutas');
 const guiso = new Menu('Guiso de lentejas', 850, '1 persona', 'especialidades');
+const carne = new Menu('Cuadril mechado al verdeo', 3850, '4 persona', 'especialidades');
 const budin = new Menu('Budin de pan', 600, '2 personas', 'postres');
 const lasagna = new Menu('Lasagna', 2200, '3 personas', 'pastas');
 const noquis = new Menu('Noquis', 900, '1 persona', 'pastas');
@@ -31,14 +32,16 @@ const pizzaNapo = new Menu('Pizza napolitana', 1500, '3 personas', 'pizzas');
 const pizzaRoque = new Menu('Pizza roquefort', 1800, '3 personas', 'pizzas');
 const pizzaCala = new Menu('Pizza calabreza', 1900, '3 personas', 'pizzas');
 const pastel = new Menu('Pastel de papas', 900, '1 persona', 'especialidades');
+const fideos = new Menu('Tallarines a la bolognesa', 850, '1 persona', 'pastas');
+const oreo = new Menu('Torta oreo', 550, '2 persona', 'postres');
 
 /*-------------------------------------------------------------------*/
 
-const especialidades = [pollo, guiso, omelet, pastel];
+const especialidades = [pollo, guiso, carne, omelet, pastel];
 const minutas = [tarta, empanada, pizzaneza];
-const pastas = [lasagna, ravioles, noquis];
+const pastas = [lasagna, fideos, ravioles, noquis];
 const pizzas = [pizzaMuzza, pizzaEsp, pizzaRoque, pizzaCala];
-const postres = [budin, chocotorta];
+const postres = [budin, oreo, chocotorta];
 
 const menuTotal = [...especialidades, ...minutas, ...pastas, ...pizzas, ...postres]
 
@@ -49,10 +52,7 @@ let selectorOpciones = document.querySelector('#opcionesMenu');
 let elegir = document.querySelector('#elegir');
 let listaResultados = document.getElementById('resultado');
 
-
-const filtrar = (array, categoria) => array.filter(item => item.categoria == categoria);
-const handleClick = (array, select) =>  filtrar(array, select.value);
-
+const filtrarCategoria = (array, {value}) => array.filter(item => item.categoria == value);
 
 const mostrarHTML = (array, lista) => {
     lista.innerHTML = '';
@@ -62,8 +62,7 @@ const mostrarHTML = (array, lista) => {
     })
 }
 
-elegir.addEventListener('click', () => mostrarHTML(handleClick(menuTotal, selectorOpciones), listaResultados))
-
+elegir.addEventListener('click', () => mostrarHTML(filtrarCategoria(menuTotal, selectorOpciones), listaResultados));
 
 /*--------------------------------------------------------------------------------------------------------*/
 
