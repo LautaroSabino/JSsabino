@@ -66,22 +66,3 @@ elegir.addEventListener('click', () => mostrarHTML(filtrarCategoria(menuTotal, s
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-let limite = 20;
-const miTexto = document.getElementById('mi_texto');
-const resultado = document.getElementById('resul');
-resultado.textContent = `o/${limite}`;
-
-function textArea (){
-    const textLength = miTexto.value.length;
-    resultado.textContent = `${textLength}/${limite}`
-
-    if(textLength > limite){
-        miTexto.classList.add('sobrepasa');
-        miTexto.classList.remove('noSobrepasa');
-    }else{
-        miTexto.classList.add('noSobrepasa');
-        miTexto.classList.remove('sobrepasa');
-    }
-}
-
-miTexto.addEventListener('input', textArea);

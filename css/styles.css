@@ -89,6 +89,7 @@ header {
     display: flex;
     flex-direction: column;
     max-width: 40%;
+    font-size: 10px;
     margin: 0% auto;
     margin-bottom: 10px;
     padding: 15px;
@@ -129,13 +130,12 @@ header {
 }
 
 .noSobrepasa{
-    padding: 5px;
+    padding: 10px;
     margin: 0% auto;
-    border: 1px solid green;
 }
 
-.Sobrepasa{
-    padding: 5px;
+.sobrepasa{
+    padding: 10px;
     margin: 0% auto;
-    border: 1px solid red;
+    border: 2px solid red;
 }

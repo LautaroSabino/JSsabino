@@ -46,3 +46,28 @@ recordar.addEventListener('click',  guardarDatos);
 
 
 /*------------------------------------------------------------------------------------------------*/
+
+let limite = 30;
+const miTexto = document.getElementById('mi_texto');
+const resultado = document.getElementById('resul');
+resultado.textContent = `o/${limite}`;
+
+function cambiarClases(elemento, claseA, claseB){
+    elemento.classList.add(claseA);
+    elemento.classList.remove(claseB);
+
+}
+
+function textArea (cajaTexto, cajaLimite, claseA, claseB){
+    const textLength = miTexto.value.length;
+    cajaLimite.textContent = `${textLength}/${limite}`
+
+    textLength > limite ? cambiarClases(cajaTexto, claseA, claseB) : cambiarClases(cajaTexto, claseB, claseA);
+
+}
+
+
+miTexto.addEventListener('input', ()=>{
+    textArea(miTexto, resultado, 'sobrepasa', 'noSobrepasa');
+})
+
