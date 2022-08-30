@@ -1,6 +1,9 @@
 const infoForm = document.querySelector('#formulario');
 let recordar = document.querySelector('#rememberMe');
 
+
+
+
 function handleSubmit(event) {
     event.preventDefault();
     let name = document.querySelector('#nombre').value
@@ -20,12 +23,8 @@ function handleSubmit(event) {
 
     }
 
-
+  
     localStorage.setItem('data', JSON.stringify(person));
-
-    const traerInfo = JSON.parse(localStorage.getItem('data'))
-
-    console.log(traerInfo);
 
 }
 
@@ -38,27 +37,37 @@ function guardarDatos() {
         fName: userFname
     }
 
+
     localStorage.setItem('user', JSON.stringify(usuario));
+
 }
 
+
 infoForm.addEventListener('submit', handleSubmit);
-recordar.addEventListener('click',  guardarDatos);
+recordar.addEventListener('click', guardarDatos);
+recordar.addEventListener('click', ()=>{
+    Swal.fire({
+        icon: 'success',
+        title: '¡Genial!',
+        text: 'Tus datos se guardaron correctamente',
+      })
+})
 
 
 /*------------------------------------------------------------------------------------------------*/
 
-let limite = 30;
-const miTexto = document.getElementById('mi_texto');
+let limite = 60;
+const miTexto = document.querySelector('.texto');
 const resultado = document.getElementById('resul');
 resultado.textContent = `o/${limite}`;
 
-function cambiarClases(elemento, claseA, claseB){
+function cambiarClases(elemento, claseA, claseB) {
     elemento.classList.add(claseA);
     elemento.classList.remove(claseB);
 
 }
 
-function textArea (cajaTexto, cajaLimite, claseA, claseB){
+function textArea(cajaTexto, cajaLimite, claseA, claseB) {
     const textLength = miTexto.value.length;
     cajaLimite.textContent = `${textLength}/${limite}`
 
@@ -67,7 +76,7 @@ function textArea (cajaTexto, cajaLimite, claseA, claseB){
 }
 
 
-miTexto.addEventListener('input', ()=>{
+miTexto.addEventListener('input', () => {
     textArea(miTexto, resultado, 'sobrepasa', 'noSobrepasa');
 })
 
