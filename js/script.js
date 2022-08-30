@@ -52,7 +52,9 @@ let selectorOpciones = document.querySelector('#opcionesMenu');
 let elegir = document.querySelector('#elegir');
 let listaResultados = document.getElementById('resultado');
 
-const filtrarCategoria = (array, {value}) => array.filter(item => item.categoria == value);
+const filtrarCategoria = (array, {
+    value
+}) => array.filter(item => item.categoria == value);
 
 const mostrarHTML = (array, lista) => {
     lista.innerHTML = '';
@@ -66,3 +68,19 @@ elegir.addEventListener('click', () => mostrarHTML(filtrarCategoria(menuTotal, s
 
 /*--------------------------------------------------------------------------------------------------------*/
 
+Toastify({
+    text: "Visitanos en Google",
+    duration: 4000,
+    destination: "https://www.google.com/search?q=don+marino&sxsrf=ALiCzsa0YV8UqI6o6LxJE9P3f-w7UJML7A%3A1661871942972&source=hp&ei=RicOY6-ZOcXn1sQPtNmXoAc&iflsig=AJiK0e8AAAAAYw41VhIQ-HV_XKl7vdpcDFmamjzy3Uka&gs_ssp=eJzj4tVP1zc0TDKLTytOL8swYLRSNaiwNE0yT0xKNjZISzNJMbMwtzKoSLE0NTE0sUgzszQ1SzM2MfPiSsnPU8hNLMrMywcAd1MTKA&oq=don+m&gs_lcp=Cgdnd3Mtd2l6EAMYATIECCMQJzILCC4QgAQQxwEQrwEyCwguEIAEEMcBEK8BMhEILhCABBCxAxDHARCvARDUAjIICAAQgAQQsQMyCwguEIAEEMcBEK8BMgUIABCABDIFCAAQgAQyCwguEIAEEMcBEK8BMgsILhCABBDHARCvAToHCCMQ6gIQJzoNCC4QxwEQ0QMQ6gIQJzoHCC4Q6gIQJzoLCAAQgAQQsQMQgwE6CAgAELEDEIMBOhEILhCABBCxAxCDARDHARDRAzoECAAQQzoKCAAQsQMQgwEQQzoICC4QsQMQgwE6CAguEIAEELEDUKcEWOsJYKEZaAFwAHgAgAHHBIgB5BCSAQkyLTEuMS4xLjKYAQCgAQGwAQo&sclient=gws-wiz",
+    newWindow: true,
+    close: true,
+    gravity: "top",
+    position: "left",
+    stopOnFocus: true,
+    style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    onClick: function () {}
+}).showToast();
+
+/*--------------------------------------------------------------------------------------------------------*/

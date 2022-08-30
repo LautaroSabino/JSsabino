@@ -1,9 +1,6 @@
 const infoForm = document.querySelector('#formulario');
 let recordar = document.querySelector('#rememberMe');
 
-
-
-
 function handleSubmit(event) {
     event.preventDefault();
     let name = document.querySelector('#nombre').value
@@ -23,7 +20,7 @@ function handleSubmit(event) {
 
     }
 
-  
+
     localStorage.setItem('data', JSON.stringify(person));
 
 }
@@ -44,13 +41,22 @@ function guardarDatos() {
 
 
 infoForm.addEventListener('submit', handleSubmit);
-recordar.addEventListener('click', guardarDatos);
-recordar.addEventListener('click', ()=>{
+recordar.addEventListener('click', () => {
     Swal.fire({
-        icon: 'success',
-        title: '¡Genial!',
-        text: 'Tus datos se guardaron correctamente',
-      })
+        title: '¿Deseas guardar tus datos?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, seguro',
+        cancelButtonText: 'No, no quiero'
+    }).then((result)=>{
+        if(result.isConfirmed){
+            guardarDatos;
+            Swal.fire({
+                title: 'Tus datos se guardaron exitosamente',
+                icon: 'success',
+            })
+        }
+    })
 })
 
 
@@ -79,4 +85,3 @@ function textArea(cajaTexto, cajaLimite, claseA, claseB) {
 miTexto.addEventListener('input', () => {
     textArea(miTexto, resultado, 'sobrepasa', 'noSobrepasa');
 })
-
