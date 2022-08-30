@@ -45,15 +45,14 @@ recordar.addEventListener('click', () => {
     Swal.fire({
         title: '¿Deseas guardar tus datos?',
         icon: 'warning',
-        showCancelButton: true,
         confirmButtonText: 'Si, seguro',
         cancelButtonText: 'No, no quiero'
     }).then((result)=>{
         if(result.isConfirmed){
-            guardarDatos;
+            guardarDatos();
             Swal.fire({
                 title: 'Tus datos se guardaron exitosamente',
-                icon: 'success',
+                icon: 'success'
             })
         }
     })
