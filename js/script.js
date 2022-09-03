@@ -52,9 +52,7 @@ let selectorOpciones = document.querySelector('#opcionesMenu');
 let elegir = document.querySelector('#elegir');
 let listaResultados = document.getElementById('resultado');
 
-const filtrarCategoria = (array, {
-    value
-}) => array.filter(item => item.categoria == value);
+const filtrarCategoria = (array, {value}) => array.filter(item => item.categoria == value);
 
 const mostrarHTML = (array, lista) => {
     lista.innerHTML = '';

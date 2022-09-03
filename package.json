@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "luxon": "^3.0.3"
+  },
+  "name": "proyectosabinojs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LautaroSabino/JSsabino.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LautaroSabino/JSsabino/issues"
+  },
+  "homepage": "https://github.com/LautaroSabino/JSsabino#readme",
+  "keywords": [],
+  "description": ""
+}
