@@ -151,8 +151,16 @@ header {
     margin-bottom: 20px;
 }
 
-.invisible{
+.tar1{
     display: none;
+    padding: 80px;
+    margin: 10px;
+    width: 25vw;
+    height: 30vh;
+    border: 3px, solid, black;
+    background-color: lightgoldenrodyellow;
+    background-image: url(../media/Pollo.jpg);
+    background-size: cover;
 }
 
 .visible{
