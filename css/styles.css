@@ -150,3 +150,11 @@ header {
     justify-content: space-evenly;
     margin-bottom: 20px;
 }
+
+.invisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+}

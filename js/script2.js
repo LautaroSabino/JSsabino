@@ -1,5 +1,5 @@
 const infoForm = document.querySelector('#formulario');
-let recordar = document.querySelector('#rememberMe');
+const recordar = document.querySelector('#rememberMe');
 
 function handleSubmit(event) {
     event.preventDefault();
