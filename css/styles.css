@@ -157,9 +157,28 @@ header {
     margin: 10px;
     width: 25vw;
     height: 30vh;
-    border: 3px, solid, black;
-    background-color: lightgoldenrodyellow;
     background-image: url(../media/Pollo.jpg);
+    background-size: cover;
+}
+
+.tar2{
+    display: none;
+    padding: 80px;
+    margin: 10px;
+    width: 25vw;
+    height: 30vh;
+    background-image: url(../media/Empanadas.jpg);
+    background-size: cover;
+}
+
+
+.tar3{
+    display: none;
+    padding: 80px;
+    margin: 10px;
+    width: 25vw;
+    height: 30vh;
+    background-image: url(../media/matambre.jpg);
     background-size: cover;
 }
 
