@@ -6,6 +6,8 @@ const tar1 = document.querySelector('.tar1');
 const tar2 = document.querySelector('.tar2');
 const tar3 = document.querySelector('.tar3');
 
+/*------------------------------------------------------------------------------------------------*/
+
 
 btnTar1.addEventListener('click', () => {
     tar1.classList.add('visible')
@@ -29,3 +31,5 @@ btnTar3.addEventListener('click', () => {
         tar3.classList.remove('visible')
     },3000)
 })
+
+/*------------------------------------------------------------------------------------------------*/
