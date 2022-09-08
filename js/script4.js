@@ -1,7 +1,5 @@
 const btnRec1 = document.querySelector('#btnRec1');
 
-
-
 function cargarJson() {
 
 	fetch('../lista.json')
@@ -11,9 +9,9 @@ function cargarJson() {
 		.then(function (data) {
 			listaHTML = '';
 			data.forEach(function (lista) {
-				listaHTML += `<li>${lista.nombre}</li>`
-				listaHTML += `<li>${lista.ingredientes}</li>`
-				listaHTML += `<li>${lista.preparacion}</li>`
+				listaHTML += `<li><b>"${lista.nombre}"<b></li> <br>` 
+				listaHTML += `<li>${lista.ingredientes}</li> <br>`
+				listaHTML += `<li>${lista.preparacion}</li> <br>`
 			})
 			document.getElementById('rec1').innerHTML = listaHTML;
 
