@@ -1,26 +1,26 @@
-const btnReceta = document.querySelector('#btnReceta');
-const divMuestra = document.querySelector('#receta');
-
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '75511ceb91mshc404a12bec1d553p160624jsn32e0fef6f7f1',
-		'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-	}
-};
-
-fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/extract?url=http%3A%2F%2Fwww.melskitchencafe.com%2Fthe-best-fudgy-brownies%2F', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+const btnRec1 = document.querySelector('#btnRec1');
 
 
-// btnReceta.addEventListener('click', ()=>{
-//     fetch('https://dev.kiwilimon.com/documentacion/recetas')
-//     .then((response)=>response.json())
-//     .then((data)=>{
-//         crearH(data);
-//     })
-// })
 
+function cargarJson() {
+
+	fetch('../lista.json')
+		.then(function (res) {
+			return res.json();
+		})
+		.then(function (data) {
+			listaHTML = '';
+			data.forEach(function (lista) {
+				listaHTML += `<li>${lista.nombre}</li>`
+				listaHTML += `<li>${lista.ingredientes}</li>`
+				listaHTML += `<li>${lista.preparacion}</li>`
+			})
+			document.getElementById('rec1').innerHTML = listaHTML;
+
+		})
+		.catch(err => console.error(err));
+
+}
+
+btnRec1.addEventListener('click', cargarJson)
 
