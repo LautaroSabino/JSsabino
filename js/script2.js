@@ -36,7 +36,7 @@ infoForm.addEventListener('submit', function handleSubmit(event) {
     }
     localStorage.setItem('data', JSON.stringify(person));
     infoForm.reset();
-    Swal.fire('Tu consulta se envió exitosamente')
+    
 })
 
 recordar.addEventListener('click', () => {
