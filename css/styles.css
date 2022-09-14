@@ -143,6 +143,7 @@ header {
 .botonesFlex{
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .imageContain{
@@ -155,7 +156,7 @@ header {
     display: none;
     padding: 80px;
     margin: 10px;
-    width: 25vw;
+    width: 20vw;
     height: 30vh;
     background-image: url(../media/Pollo.jpg);
     background-size: cover;
@@ -165,7 +166,7 @@ header {
     display: none;
     padding: 80px;
     margin: 10px;
-    width: 25vw;
+    width: 20vw;
     height: 30vh;
     background-image: url(../media/Empanadas.jpg);
     background-size: cover;
@@ -176,7 +177,7 @@ header {
     display: none;
     padding: 80px;
     margin: 10px;
-    width: 25vw;
+    width: 20vw;
     height: 30vh;
     background-image: url(../media/matambre.jpg);
     background-size: cover;

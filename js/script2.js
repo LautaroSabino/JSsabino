@@ -1,7 +1,22 @@
 const infoForm = document.querySelector('#formulario');
 const recordar = document.querySelector('#rememberMe');
 
-function handleSubmit(event) {
+
+function guardarDatos() {
+    let username = document.querySelector('#nombre').value
+    let userFname = document.querySelector('#apellido').value
+
+    const usuario = {
+        name: username,
+        fName: userFname
+    }
+
+    localStorage.setItem('user', JSON.stringify(usuario));
+
+}
+
+
+infoForm.addEventListener('submit', function handleSubmit(event) {
     event.preventDefault();
     let name = document.querySelector('#nombre').value
     let firstName = document.querySelector('#apellido').value
@@ -19,28 +34,11 @@ function handleSubmit(event) {
         mensaje
 
     }
-
-
     localStorage.setItem('data', JSON.stringify(person));
+    infoForm.reset();
+    Swal.fire('Tu consulta se envió exitosamente')
+})
 
-}
-
-function guardarDatos() {
-    let username = document.querySelector('#nombre').value
-    let userFname = document.querySelector('#apellido').value
-
-    const usuario = {
-        name: username,
-        fName: userFname
-    }
-
-
-    localStorage.setItem('user', JSON.stringify(usuario));
-
-}
-
-
-infoForm.addEventListener('submit', handleSubmit);
 recordar.addEventListener('click', () => {
     Swal.fire({
         title: '¿Deseas guardar tus datos?',
@@ -85,3 +83,68 @@ function textArea(cajaTexto, cajaLimite, claseA, claseB) {
 miTexto.addEventListener('input', () => {
     textArea(miTexto, resultado, 'sobrepasa', 'noSobrepasa');
 })
+
+
+// const infoForm = document.querySelector('#formulario');
+// const recordar = document.querySelector('#rememberMe');
+
+// function handleSubmit(event) {
+//     event.preventDefault();
+//     let name = document.querySelector('#nombre').value
+//     let firstName = document.querySelector('#apellido').value
+//     let number = document.querySelector('#numero').value
+//     let mensaje = document.querySelector('#mensaje').value
+
+//     const person = {
+
+//         name,
+
+//         firstName,
+
+//         number,
+
+//         mensaje
+
+//     }
+//     localStorage.setItem('data', JSON.stringify(person));
+//     form.reset();
+// }
+
+// function guardarDatos() {
+//     let username = document.querySelector('#nombre').value
+//     let userFname = document.querySelector('#apellido').value
+
+//     const usuario = {
+//         name: username,
+//         fName: userFname
+//     }
+
+
+//     localStorage.setItem('user', JSON.stringify(usuario));
+
+// }
+
+
+// infoForm.addEventListener('submit', handleSubmit);
+
+
+
+
+// recordar.addEventListener('click', () => {
+//     Swal.fire({
+//         title: '¿Deseas guardar tus datos?',
+//         icon: 'warning',
+//         showCancelButton: true,
+//         confirmButtonText: 'Si, seguro',
+//         cancelButtonText: 'No, no quiero'
+//     }).then((result)=>{
+//         if(result.isConfirmed){
+//             guardarDatos();
+//             Swal.fire({
+//                 title: 'Tus datos se guardaron exitosamente',
+//                 icon: 'success'
+//             })
+//         }
+//     })
+// })
+

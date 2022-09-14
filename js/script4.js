@@ -20,5 +20,5 @@ function cargarJson() {
 
 }
 
-btnRec1.addEventListener('click', cargarJson)
+btnRec1.addEventListener('click', cargarJson);
 
