@@ -179,6 +179,7 @@ header {
     margin: 10px;
     width: 20vw;
     height: 30vh;
+    margin-bottom: 10px;
     background-image: url(../media/matambre.jpg);
     background-size: cover;
 }
